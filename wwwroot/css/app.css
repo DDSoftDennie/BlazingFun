@@ -48,3 +48,12 @@ a, .btn-link {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+.high{
+    color: darkred;
+    font-weight: bold;
+}
+
+.low{
+    color:blue;
+}
