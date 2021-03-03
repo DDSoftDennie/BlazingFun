@@ -1,0 +1,22 @@
+
+<h1>Input Counter</h1>
+<p>
+    Current count:
+    <span class="@style">@currentCount</span>
+</p>
+<input type="number" @bind="@increment" />
+<input type="number" @bind="@increment" @bind:event="oninput"/>
+
+<button class="btn btn-primary" @onclick="IncrementCount" disabled="@(currentCount >= 20)">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private int increment = 1;
+    private string style = "";
+    private void IncrementCount()
+    {
+        currentCount += increment;
+        style = currentCount <10 ? "low" : "high";
+    }
+}
